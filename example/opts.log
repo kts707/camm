@@ -23,7 +23,7 @@
 --bound_factor=2.0
 --bound_reset=0.0
 --ce_color
---checkpoint_dir=logdir/
+--checkpoint_dir=example/
 --chunk=32768
 --clip_scale=100.0
 --cyc_wt=1.0
@@ -64,7 +64,7 @@
 --learning_rate=0.0005
 --lineload
 --local_rank=0
---logname=ama-final/ama-female-skel
+--logname=
 --loss_flt
 --mc_threshold=-0.002
 --model_path=logdir/ama-final/ama-female-ft2/params_latest.pth
