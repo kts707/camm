@@ -4,7 +4,7 @@ We provide one example of direct pose manipulation by user defined transformatio
 
 Note that running it does not require training beforehand, only installation and AMA data preparation are needed.
 
-Please see Line 55 in [scripts/repose/repose_single.py](scripts/repose/repose_single.py) for an example on how to define custom rotations for desired kinematic chain links. Users can define whatever rotations they would like to apply to any kinematic chain link.
+Please see Line 55 in [scripts/repose/repose_single.py](https://github.com/kts707/camm/blob/main/scripts/repose/repose_single.py#L55) for an example on how to define custom rotations for desired kinematic chain links. Users can define whatever rotations they would like to apply to any kinematic chain link.
 
 ```
 # simply re-posing
