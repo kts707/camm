@@ -1,0 +1,11 @@
+logdir
+database
+tmp/
+raw/
+__pycache__/
+lasr_vcn/
+*.pyc
+.nfs*
+*.png
+filtered_imgs/
+*_eval/
