@@ -190,11 +190,13 @@ We also use the external repositories listed below in this project. A big thanks
 ## Citation
 If you find this project useful in your research, please consider citing:
 ```
-@inproceedings{camm,
-    title={{CAMM}: Building Category-Agnostic and Animatable 3D Models from Monocular Videos}, 
-    author={Tianshu Kuai and Akash Karthikeyan and Yash Kant and Ashkan Mirzaei and Igor Gilitschenski},
-    year={2023},
-    booktitle={CVPRW},
+@InProceedings{Kuai_2023_CVPR,
+    author    = {Kuai, Tianshu and Karthikeyan, Akash and Kant, Yash and Mirzaei, Ashkan and Gilitschenski, Igor},
+    title     = {CAMM: Building Category-Agnostic and Animatable 3D Models From Monocular Videos},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2023},
+    pages     = {6586-6596}
 }
 ```
 
