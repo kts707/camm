@@ -150,3 +150,19 @@ python preprocess/img2lines.py --seqname $seqname
 python preprocess/prepare_dino_extract.py data_info_eagle.pkl --seqname $seqname
 python preprocess/compute_dino.py data_info_eagle.pkl 16
 ```
+
+### Custom Dataset
+Place all the RGB videos under raw/my_data
+```
+# preprocess the dataset
+bash preprocess/preprocess.sh my_data .mp4 24
+
+# store as lines
+seqname=my_data
+python preprocess/img2lines.py --seqname $seqname
+
+# DINO features
+python preprocess/prepare_dino_extract.py data_info_iiwa.pkl --seqname $seqname
+python preprocess/compute_dino.py data_info_my_data.pkl 16
+
+```
