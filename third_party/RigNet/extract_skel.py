@@ -418,7 +418,11 @@ if __name__ == '__main__':
     parser.add_argument('--symm', action='store_true',
                         help='whether to use primMST_symmetry')
     args = parser.parse_args()
-    input_folder = "input_meshes/"
+
+    # folder for saving processed meshes
+    input_folder = "./input_meshes/"
+    if not os.path.isdir(input_folder):
+        os.makedirs(input_folder)
 
     # downsample_skinning is used to speed up the calculation of volumetric geodesic distance
     # and to save cpu memory in skinning calculation.
