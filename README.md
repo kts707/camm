@@ -99,7 +99,7 @@ conda activate rignet
 
 
 # extract and save the kinematic chain
-python extract_skel.py --mesh_path logdir/$extra_tag/$seqname-ft2-rendering/mesh-rest.obj --mesh_name ama --output_path ama_joints.pkl --symm
+python extract_skel.py --mesh_path ../../logdir/$extra_tag/$seqname-ft2-rendering/mesh-rest.obj --mesh_name ama --output_path ama_joints.pkl --symm
 
 # arguments for extract_skel.py
 # --mesh_path: the path to the canonical mesh (.obj file)
