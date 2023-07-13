@@ -144,7 +144,7 @@ Assuming a good kinematic chain is obtained from RigNet (.pkl file)
 # define kinematic chain .pkl file
 kinematic-chain=ama_joints.pkl
 
-flagfile=opt_configs/ama/skel/update-all
+flagfile=opt_configs/ama/skel/update-all-dp
 
 bash scripts/template-kinematic-chain.sh 0 10001 $flagfile $extra_tag $kinematic-chain
 
@@ -175,12 +175,26 @@ Note that it is using our pre-trained checkpoint, so users can directly run it a
 ## Quantitative Evaluation
 Please follow the detailed instructions [here](docs/EVALUATION.md) to run quantitative evaluation for each dataset.
 
+## Common Install Issues
+
+* Q: pytorch reports `CUBLAS_STATUS_NOT_SUPPORTED`
+    * install `pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 --extra-index-url https://download.pytorch.org/whl/cu113`
+* Q: pyrender reports `ImportError: Library "GLU" not found.`
+    * install `sudo apt install freeglut3-dev`
+* Q: ffmpeg reports `libopenh264.so.5` not found
+    * `sudo apt-get install ffmpeg` and then delete ~/anaconda/envs/camm/bin/ffmpeg
+    * or re-install ffmpeg in conda `conda install -c conda-forge ffmpeg`
+* Q: cannot find `./input_meshes/xxx_normalized.binvox` when running `extract_skel.py` to get the initial estimate of the kinematic chain
+    * run `./binvox -d 88 -pb ./input_meshes/xxx_normalized.obj` for Linux
+    * run `binvox.exe -d 88 ./input_meshes/xxx_normalized.obj` for Windows
+
 ## Acknowledgement
 Our code is mainly built based on [BANMo](https://github.com/facebookresearch/banmo). We thank the authors for sharing the code and for the help in explaining the code!
 
 We also use the external repositories listed below in this project. A big thanks to them for their code!
 - [RigNet](https://github.com/zhan-xu/RigNet)
 - [Detectron2](https://github.com/facebookresearch/detectron2)
+- [dino-vit-features](https://github.com/ShirAmir/dino-vit-features)
 - [SoftRas](https://github.com/ShichenLiu/SoftRas)
 - [Chamfer3D](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch)
 - [Nerf_pl](https://github.com/kwea123/nerf_pl)

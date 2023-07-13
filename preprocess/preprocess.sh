@@ -1,5 +1,5 @@
 #
-# bash preprocess/preprocess.sh Sultan .MOV no 10 
+# bash preprocess/preprocess.sh Sultan .MOV n 10 
 #                             folder, file ext, human or not, fps
 # file ext can be {.MOV, .mp4, .txt}
 
