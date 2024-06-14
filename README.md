@@ -16,6 +16,7 @@ Please visit our [project page](https://camm3d.github.io/) for more qualitative 
 - [Optimization](#optimization)
 - [Explicit Re-posing](#explicit-re-posing)
 - [Quantitative Evaluation](#quantitative-evaluation)
+- [Common Install Issues](#common-install-issues)
 - [Acknowledgement](#acknowledgement)
 - [Citation](#citation)
 - [License](#license)
@@ -184,9 +185,11 @@ Please follow the detailed instructions [here](docs/EVALUATION.md) to run quanti
 * Q: ffmpeg reports `libopenh264.so.5` not found
     * `sudo apt-get install ffmpeg` and then delete ~/anaconda/envs/camm/bin/ffmpeg
     * or re-install ffmpeg in conda `conda install -c conda-forge ffmpeg`
-* Q: cannot find `./input_meshes/xxx_normalized.binvox` when running `extract_skel.py` to get the initial estimate of the kinematic chain
-    * run `./binvox -d 88 -pb ./input_meshes/xxx_normalized.obj` for Linux
-    * run `binvox.exe -d 88 ./input_meshes/xxx_normalized.obj` for Windows
+* Q: cannot find `./input_meshes/xxx_normalized.binvox` when running `extract_skel.py`
+    * this means that you need to run binvox on the normalized mesh `./input_meshes/xxx_normalized.obj` yourself in command line
+    * the binvox application files are also under `third_party/RigNet`
+    * for Linux: run `./binvox -d 88 -pb ./input_meshes/xxx_normalized.obj` under `third_party/RigNet`
+    * for Windows: run `binvox.exe -d 88 ./input_meshes/xxx_normalized.obj` under `third_party/RigNet`
 
 ## Acknowledgement
 Our code is mainly built based on [BANMo](https://github.com/facebookresearch/banmo). We thank the authors for sharing the code and for the help in explaining the code!
